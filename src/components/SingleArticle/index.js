@@ -6,7 +6,7 @@ const SingleArticle = ({ articles }) => {
   const singleArticle = articles.find(article => article.id === id);
   return (
     <div className='singleArticle'>
-      <h1>{singleArticle.title}</h1>
+      <h1>{singleArticle?.title}</h1>
       <img
         src={singleArticle.imageUrl}
         alt={singleArticle.title}

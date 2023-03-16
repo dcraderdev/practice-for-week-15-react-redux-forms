@@ -8,9 +8,11 @@ const ArticleList = () => {
   const dispatch = useDispatch();
   const articles = useSelector(state=>state.articleState.entries);
 
+  console.log(articles);
+
   useEffect(() => {
     dispatch(loadArticles());
-  }, [dispatch]);
+  }, [dispatch, articles]);
 
   return (
     <div>
